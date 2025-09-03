@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta CEP - ViaCEP</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Consulta CEP</h1>
+    <form id="cep-form" autocomplete="off">
+      <div class="input-group">
+        <input type="text" id="cep" maxlength="9" placeholder="Digite o CEP" required>
+        <button type="submit" id="buscar-btn" title="Buscar CEP">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </form>
+    <div id="resultado" class="hidden">
+      <div class="fields-row">
+        <div class="fields-col">
+          <div class="field-group">
+            <label>Logradouro</label>
+            <div class="field-copy">
+              <input type="text" id="logradouro" readonly>
+              <button class="copy-btn" data-field="logradouro" title="Copiar">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Número</label>
+            <div class="field-copy">
+              <input type="text" id="numero" placeholder="Digite o número">
+              <button class="copy-btn" data-field="numero" title="Copiar">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Complemento</label>
+            <div class="field-copy">
+              <input type="text" id="complemento" placeholder="Apartamento, bloco, etc.">
+              <button class="copy-btn" data-field="complemento" title="Copiar">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Referência</label>
+            <div class="field-copy">
+              <input type="text" id="referencia" placeholder="Ponto de referência">
+              <button class="copy-btn" data-field="referencia" title="Copiar">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="fields-col">
+          <div class="field-group">
+            <label>Bairro</label>
+            <div class="field-copy">
+              <input type="text" id="bairro" readonly>
+              <button class="copy-btn" data-field="bairro" title="Copiar">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Cidade</label>
+            <div class="field-copy">
+              <input type="text" id="localidade" readonly>
+              <button class="copy-btn" data-field="localidade" title="Copiar">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Estado</label>
+            <div class="field-copy">
+              <input type="text" id="uf" readonly>
+              <button class="copy-btn" data-field="uf" title="Copiar">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>DDD</label>
+            <div class="field-copy">
+              <input type="text" id="ddd" readonly>
+              <button class="copy-btn" data-field="ddd" title="Copiar">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <button id="limpar-btn" class="hidden" type="button">Limpar dados / Nova consulta</button>
+    <div id="mensagem" class="mensagem"></div>
+  </div>
+  <script src="script.js"></script>
+
+  <footer class="footer">
+    Desenvolvido por EHS
+  </footer>
+</body>
+</html>
